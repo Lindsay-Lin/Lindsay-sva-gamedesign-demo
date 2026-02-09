@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ds6ffk76ee6ox"]
+
+[ext_resource type="Texture2D" uid="uid://ciswbkj1qwtp1" path="res://pic/fa3f87adc91ee07b8493368639914e71.JPG" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://b3wkfydsp2uft" path="res://icon.svg" id="2_h2yge"]
+
+[node name="Node2D" type="Node2D" unique_id=1042346512]
+position = Vector2(-121, -135)
+
+[node name="Kitten" type="Sprite2D" parent="." unique_id=1663781805]
+position = Vector2(801.0001, 314)
+scale = Vector2(0.24062501, 0.24062498)
+texture = ExtResource("1_0xm2m")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=321748161]
+modulate = Color(1, 0.011764706, 1, 1)
+position = Vector2(381, 569)
+texture = ExtResource("2_h2yge")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1381345406]
+position = Vector2(240, 493)
+texture = ExtResource("2_h2yge")
