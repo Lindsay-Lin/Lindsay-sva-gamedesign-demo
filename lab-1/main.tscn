@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ciswbkj1qwtp1" path="res://pic/fa3f87adc91ee07b8493368639914e71.JPG" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://b3wkfydsp2uft" path="res://icon.svg" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://4ecgbqfdno42" path="res://tree.tscn" id="3_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=1042346512]
 position = Vector2(-121, -135)
@@ -13,9 +14,37 @@ texture = ExtResource("1_0xm2m")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=321748161]
 modulate = Color(1, 0.011764706, 1, 1)
-position = Vector2(381, 569)
+position = Vector2(363, 568)
 texture = ExtResource("2_h2yge")
 
 [node name="Icon2" type="Sprite2D" parent="." unique_id=1381345406]
-position = Vector2(240, 493)
+position = Vector2(294, 319)
 texture = ExtResource("2_h2yge")
+
+[node name="ColorRect" parent="." unique_id=1748094633 instance=ExtResource("3_h2yge")]
+offset_left = 642.0
+offset_top = 610.0
+offset_right = 748.5
+offset_bottom = 681.0
+color = Color(0.36096263, 0.43243927, 0.7530977, 1)
+
+[node name="ColorRect2" parent="." unique_id=927491261 instance=ExtResource("3_h2yge")]
+offset_left = 870.0
+offset_top = 631.0
+offset_right = 976.5
+offset_bottom = 702.0
+color = Color(0.36096263, 0.43243927, 0.7530977, 1)
+
+[node name="ColorRect3" parent="." unique_id=1342073777 instance=ExtResource("3_h2yge")]
+offset_left = 491.0
+offset_top = 540.0
+offset_right = 597.5
+offset_bottom = 611.0
+color = Color(0.36096263, 0.43243927, 0.7530977, 1)
+
+[node name="ColorRect4" parent="." unique_id=1784977946 instance=ExtResource("3_h2yge")]
+offset_left = 1026.0
+offset_top = 521.0
+offset_right = 1132.5
+offset_bottom = 592.0
+color = Color(0.36096263, 0.43243927, 0.7530977, 1)
