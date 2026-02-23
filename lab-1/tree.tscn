@@ -7,7 +7,7 @@ offset_right = 91.5
 offset_bottom = 62.0
 color = Color(0, 0.56078434, 0, 1)
 
-[node name="BRANCH" type="ColorRect" parent="." unique_id=74926919]
+[node name="TRUNK" type="ColorRect" parent="." unique_id=74926919]
 layout_mode = 0
 offset_left = 31.0
 offset_top = 46.0

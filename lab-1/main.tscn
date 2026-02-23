@@ -36,10 +36,10 @@ offset_bottom = 702.0
 color = Color(0.36096263, 0.43243927, 0.7530977, 1)
 
 [node name="ColorRect3" parent="." unique_id=1342073777 instance=ExtResource("3_h2yge")]
-offset_left = 491.0
-offset_top = 540.0
-offset_right = 597.5
-offset_bottom = 611.0
+offset_left = 999.0
+offset_top = 270.0
+offset_right = 1105.5
+offset_bottom = 341.0
 color = Color(0.36096263, 0.43243927, 0.7530977, 1)
 
 [node name="ColorRect4" parent="." unique_id=1784977946 instance=ExtResource("3_h2yge")]

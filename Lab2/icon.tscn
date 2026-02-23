@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c17xik7hvxny4"]
+
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_hqyvl"]
+[ext_resource type="Script" uid="uid://r71f5c5egojy" path="res://icon.gd" id="2_otv2m"]
+
+[node name="Robot" type="Sprite2D" unique_id=1774228339]
+position = Vector2(96, 89)
+texture = ExtResource("1_hqyvl")
+script = ExtResource("2_otv2m")
+
+[node name="Robot 2" type="Sprite2D" parent="." unique_id=304428304]
+position = Vector2(226, 27)
+texture = ExtResource("1_hqyvl")
+
+[node name="Robot 3" type="Sprite2D" parent="Robot 2" unique_id=173150023]
+position = Vector2(-195, 178)
+texture = ExtResource("1_hqyvl")
+
+[node name="Robot 4" type="Sprite2D" parent="Robot 2/Robot 3" unique_id=202857921]
+position = Vector2(181, 22)
+texture = ExtResource("1_hqyvl")
