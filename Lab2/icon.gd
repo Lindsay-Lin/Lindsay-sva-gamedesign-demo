@@ -11,11 +11,11 @@ extends Sprite2D
 func _ready() -> void:
 	print("Hello World!")
 	print(position.x)
+	
 
 #func _input(event: InputEvent) -> void:
 	#print(event)
-
-
+	
 
 
 
@@ -25,4 +25,17 @@ func _process(delta: float) -> void:
 	position.x += speed
 	position.y += speed
 	
+	# player press space
+	if Input.is_action_pressed("ui_accept"):
+		
+		moving = true
+		position.x += speed * delta
+		
+		print("Moving")
+
+	else:
+		
+		moving = false
+		print("Not moving")
+
 	pass
