@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://dac7jyo7gtb41"]
+
+[ext_resource type="Script" uid="uid://82l1c27xikiy" path="res://character_body_3d.gd" id="1_y5joi"]
+
+[sub_resource type="Environment" id="Environment_y5joi"]
+background_mode = 2
+background_energy_multiplier = 4.37
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_y5joi"]
+noise_type = 4
+frequency = 0.0144
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_b73p6"]
+noise = SubResource("FastNoiseLite_y5joi")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6an4n"]
+sky_top_color = Color(0.151674, 0.62702745, 0.82018083, 1)
+sky_horizon_color = Color(0.8696367, 0.5226061, 0.7470189, 1)
+sky_cover = SubResource("NoiseTexture2D_b73p6")
+
+[sub_resource type="Sky" id="Sky_y5joi"]
+sky_material = SubResource("ProceduralSkyMaterial_6an4n")
+
+[sub_resource type="Environment" id="Environment_h54yn"]
+background_mode = 2
+background_color = Color(0.058573633, 0.3095106, 0.41319028, 1)
+background_energy_multiplier = 0.97
+sky = SubResource("Sky_y5joi")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b73p6"]
+radius = 0.4296875
+height = 1.5024414
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_y5joi"]
+
+[node name="Node3D" type="Node3D" unique_id=1304367591]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1915739667]
+transform = Transform3D(0.84229445, 0.4254738, -0.33092618, -0.08213019, 0.70807993, 0.7013398, 0.5327239, -0.56355554, 0.63135606, 0.5645623, 5.641698, 1.4673498)
+light_color = Color(0.7294118, 1, 1, 1)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=489907418]
+transform = Transform3D(-0.021149114, -0.40155697, 0.91558987, 0.017880615, 0.91549635, 0.40192893, -0.99961644, 0.024871752, -0.012181849, 8.275077, 2.9614825, 2.574218)
+environment = SubResource("Environment_y5joi")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=495587311]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.58048105, -3.4335797, -5.537814)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Sprite3D" unique_id=1193689394]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000008, 0.14946723, 3.212523, 1.514308)
+use_collision = true
+size = Vector3(10.416176, 1.5438232, 10.533966)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Sprite3D" unique_id=1922025686]
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000005, 0, 0, 0, 1.0000017, 1.4956245, 5.426961, 12.044046)
+use_collision = true
+size = Vector3(6.19075, 0.24316406, 6.1919556)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Sprite3D" unique_id=662816637]
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000005, 0, 0, 0, 1.0000017, 1.4956245, 6.8191347, 19.39639)
+use_collision = true
+size = Vector3(6.19075, 0.24316406, 6.1919556)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=655368426]
+environment = SubResource("Environment_h54yn")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=522369886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31481218, 2.5445814, -2.8805943)
+script = ExtResource("1_y5joi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1975588724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21409488, -0.7046516, -0.08663207)
+shape = SubResource("CapsuleShape3D_b73p6")
+debug_color = Color(0.6886564, 0.3233862, 0.9475526, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=2119819796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.41957426, 0)
+mesh = SubResource("CapsuleMesh_y5joi")
+
+[node name="Head" type="Node3D" parent="Player" unique_id=172593068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.41957426, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head" unique_id=1081967619]
+transform = Transform3D(-0.9923017, 0, -0.12384405, 0, 1, 0, 0.12384405, 0, -0.9923017, 0, 0.41957426, 0)
+current = true
